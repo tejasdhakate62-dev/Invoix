@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base App Resources -->
+    <string name="app_name">Invoix</string>
+
+    <!-- Currency Selector Options -->
+    <string-array name="currency_options">
+        <item>US Dollar ($)</item>
+        <item>Indian Rupee (₹)</item>
+        <item>Euro (€)</item>
+        <item>British Pound (£)</item>
+    </string-array>
+
+    <!-- Splash Screen Resources -->
+    <string name="app_title_invoix">Invoix</string>
+    <string name="app_tagline">CREATE. SEND. GET PAID.</string>
+    <string name="desc_app_logo">Invoix Logo</string>
+
+    <!-- Login Screen Resources -->
+    <string name="subtitle_login">Sign in to manage your billings</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="link_forgot_password">Forgot Password?</string>
+    <string name="btn_login">Login</string>
+    <string name="text_dont_have_account">Don\'t have an account? </string>
+    <string name="link_sign_up">Sign Up</string>
+
+    <!-- Dashboard Screen Resources -->
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="default_business_name">Your Business Name</string>
+    <string name="desc_settings">Settings</string>
+    <string name="title_overview">Overview</string>
+    <string name="label_total_paid">Total Paid</string>
+    <string name="label_pending_dues">Pending Dues</string>
+    <string name="default_currency_value">$0.00</string>
+    <string name="title_quick_actions">Quick Actions</string>
+    <string name="action_create_invoice">+ Create New Invoice</string>
+    <string name="title_recent_invoices">Recent Invoices</string>
+    <string name="action_view_all">View All</string>
+    <string name="empty_invoice_title">No Invoices Created Yet</string>
+    <string name="empty_invoice_subtitle">Tap the button above to bill your first client.</string>
+
+    <!-- Invoice Creation Screen Resources -->
+    <string name="title_client_details">Client Details</string>
+    <string name="hint_client_name">Client Name / Company</string>
+    <string name="hint_client_email">Client Email Address</string>
+    <string name="title_invoice_info">Invoice Information</string>
+    <string name="hint_invoice_no">Invoice No. (e.g., #001)</string>
+    <string name="hint_due_date">Due Date</string>
+    <string name="title_items_services">Items &amp; Services</string>
+    <string name="action_add_item">+ Add Item</string>
+    <string name="sample_item_text">Sample Service/Product Item</string>
+    <string name="sample_item_price">1 x $0.00</string>
+    <string name="label_tax_rate">Tax Rate (%%)</string> <!-- Fixed: Escaped percent sign -->
+    <string name="hint_zero">0</string>
+    <string name="label_total_amount">Total Amount:</string>
+    <string name="action_save_choose_template">Save &amp; Choose Template</string>
+
+    <!-- Signup Screen Resources -->
+    <string name="title_create_account">Create Account</string>
+    <string name="subtitle_get_started">Get started with your invoicing</string>
+    <string name="hint_full_or_business_name">Full Name or Business Name</string>
+    <string name="action_register">Register</string>
+    <string name="text_already_have_account">Already have an account? </string>
+    <string name="link_sign_in">Sign In</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+</resources>

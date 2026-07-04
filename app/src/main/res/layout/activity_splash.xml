@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity_splash">
+
+    <!-- Center Branding Container (Logo + App Name) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <!-- Invoix Brand Logo -->
+        <ImageView
+            android:id="@+id/ivSplashLogo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/desc_app_logo"
+            android:src="@drawable/invoix_logo"
+            tools:srcCompat="@drawable/invoix_logo" />
+
+        <!-- Bold Title Typography -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title_invoix"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:textColor="#1A1C29" />
+
+    </LinearLayout>
+
+    <!-- Bottom Tagline Container -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_tagline"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#7A7E85"
+        android:letterSpacing="0.2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp" />
+
+</RelativeLayout>

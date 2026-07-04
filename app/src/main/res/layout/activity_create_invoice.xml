@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/screen_background"
+    tools:context=".activity_create_invoice">
+
+    <!-- Scrollable Form Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Section 1: Client Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_client_details"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etClientName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/hint_client_name"
+                android:inputType="textPersonName|textAutoCorrect"
+                android:autofillHints="name"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/card_background"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary"
+                android:layout_marginBottom="12dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etClientEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/hint_client_email"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/card_background"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary"
+                android:layout_marginBottom="24dp"
+                android:textSize="15sp" />
+
+            <!-- Section 2: Invoice Metadata -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_invoice_info"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etInvoiceNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_invoice_no"
+                    android:inputType="textCapCharacters"
+                    android:autofillHints="none"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/card_background"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColorHint="?android:attr/textColorSecondary"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="15sp"
+                    tools:ignore="TextFields" />
+
+                <EditText
+                    android:id="@+id/etInvoiceDate"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="Invoice Date"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:autofillHints="none"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginStart="8dp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Due Date Options -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date Option"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgDueDateOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <RadioButton
+                    android:id="@+id/rbDueImmediately"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Due Immediately"
+                    android:textSize="13sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbDueCustom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Custom Due Date"
+                    android:textSize="13sp"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/hint_due_date"
+                android:focusable="false"
+                android:clickable="false"
+                android:autofillHints="none"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/card_background"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary"
+                android:layout_marginBottom="24dp"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <!-- Section 3: Line Items Listing -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_items_services"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/tvAddItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_add_item"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_alignParentEnd="true"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <!-- Dynamic Container for Items -->
+            <LinearLayout
+                android:id="@+id/llItemsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/card_background"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/sample_item_text"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sample_item_price"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp"
+                        android:gravity="end"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Section 4: Tax Calculation Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_tax_rate"
+                    android:textSize="15sp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/etTaxRate"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_zero"
+                    android:inputType="numberDecimal"
+                    android:autofillHints="none"
+                    android:gravity="center"
+                    android:background="@drawable/card_background"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColorHint="?android:attr/textColorSecondary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Sticky Breakdown & Action Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/colorSurface"
+        android:elevation="8dp"
+        android:padding="20dp"
+        tools:ignore="UnusedAttribute">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_total_amount"
+                android:textSize="16sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/tvInvoiceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_currency_value"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnGenerateInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="@string/action_save_choose_template"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/button_text_color"
+            android:background="@drawable/button_gradient"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</LinearLayout>

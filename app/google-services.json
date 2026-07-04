@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591966646102",
+    "project_id": "invoix-b0e04",
+    "storage_bucket": "invoix-b0e04.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591966646102:android:d5af17b4fc0e195ce370f7",
+        "android_client_info": {
+          "package_name": "com.example.invoice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591966646102-rrcdd986ao729cm20n5u0tidunvm83bk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK9TZM4iZQ13-ZV35kTqDW3qzW0Xs-LGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591966646102-rrcdd986ao729cm20n5u0tidunvm83bk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

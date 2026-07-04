@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@drawable/screen_background"
+    tools:context=".activity_signup">
+
+    <!-- Top Spacer to push content down slightly -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Title & Subtitle -->
+    <TextView
+        android:id="@+id/tvSignUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_create_account"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/tvSignUpSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subtitle_get_started"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Centered Form Container -->
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Full Name / Business Name Input Field -->
+        <EditText
+            android:id="@+id/etSignUpName"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="@string/hint_full_or_business_name"
+            android:inputType="textPersonName"
+            android:autofillHints="name"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="12dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textSize="15sp" />
+
+        <!-- Email Input Field -->
+        <EditText
+            android:id="@+id/etSignUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="12dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textSize="15sp" />
+
+        <!-- Password Input Field -->
+        <EditText
+            android:id="@+id/etSignUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:autofillHints="password"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="12dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textSize="15sp" />
+
+        <!-- Confirm Password Input Field -->
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:hint="@string/hint_confirm_password"
+            android:inputType="textPassword"
+            android:autofillHints="password"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="20dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textSize="15sp" />
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/btnSignUpNext"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/action_register"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/button_text_color"
+            android:background="@drawable/button_gradient"
+            app:backgroundTint="@null"
+            android:layout_marginBottom="16dp" />
+
+        <!-- OR Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#26FFFFFF" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" OR "
+                android:textSize="12sp"
+                android:textColor="#A099C0"
+                android:layout_marginHorizontal="12dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#26FFFFFF" />
+        </LinearLayout>
+
+        <!-- Google Sign In Button -->
+        <Button
+            android:id="@+id/btnGoogleSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Continue with Google"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/button_text_color"
+            android:backgroundTint="#00FFFFFF"
+            app:strokeColor="#26FFFFFF"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+    </LinearLayout>
+
+    <!-- Bottom Spacer to keep everything balanced -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Login Redirect -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_already_have_account"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvBackToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/link_sign_in"
+            android:textColor="#FF007F"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</LinearLayout>

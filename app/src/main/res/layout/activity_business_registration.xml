@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/screen_background"
+    tools:context=".activity_business_registration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Top Spacer for centering balance -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Title & Subtitle -->
+        <TextView
+            android:id="@+id/tvBizTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setup Your Business"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <TextView
+            android:id="@+id/tvBizSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="These details will appear on your issued invoices."
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Logo Upload Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/card_background"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/ivShopLogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/invoix_logo"
+                android:scaleType="fitCenter"
+                android:background="?attr/colorSurface"
+                android:padding="4dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Logo"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap upload to select shop logo image"
+                    android:textSize="11sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnUploadLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:textColor="?android:attr/textColorPrimary"
+                android:backgroundTint="?attr/colorSurface"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+        </LinearLayout>
+
+        <!-- Legal Business Name -->
+        <EditText
+            android:id="@+id/etBusinessName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Legal Business Name"
+            android:inputType="textCapWords|textAutoCorrect"
+            android:autofillHints="organizationName"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/card_background"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp" />
+
+        <!-- Tax ID / GSTIN / VAT Number -->
+        <EditText
+            android:id="@+id/etTaxId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Tax ID / GSTIN / EIN (Optional)"
+            android:inputType="textCapCharacters"
+            android:autofillHints="none"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/card_background"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp" />
+
+        <!-- Business Phone Number -->
+        <EditText
+            android:id="@+id/etBusinessPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Business Phone Number"
+            android:inputType="phone"
+            android:autofillHints="phoneNumber"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/card_background"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp" />
+
+        <!-- Business Address Line -->
+        <EditText
+            android:id="@+id/etBusinessAddress"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Complete Business Address"
+            android:inputType="textPostalAddress|textMultiLine"
+            android:autofillHints="postalAddress"
+            android:gravity="top|start"
+            android:padding="16dp"
+            android:background="@drawable/card_background"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:layout_marginBottom="24dp"
+            android:textSize="16sp" />
+
+        <!-- Submit / Register Business Button -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Complete Setup"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/button_text_color"
+            android:background="@drawable/button_gradient"
+            app:backgroundTint="@null"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bottom Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Skip Option if they want to setup later -->
+        <TextView
+            android:id="@+id/tvSkipSetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'll do this later"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

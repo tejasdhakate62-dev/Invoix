@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#404F46E5"> <!-- Translucent touch ripple -->
+    <item>
+        <layer-list>
+            <!-- Layer 1: Glass Outline Stroke -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="24dp" />
+                    <stroke
+                        android:width="1.5dp"
+                        android:color="#504F46E5" /> <!-- Translucent Indigo outline shine -->
+                </shape>
+            </item>
+            <!-- Layer 2: Glossy Transparent Liquid Fill -->
+            <item android:top="1.5dp" android:bottom="1.5dp" android:left="1.5dp" android:right="1.5dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#10818CF8"
+                        android:endColor="#254F46E5"
+                        android:angle="270" /> <!-- Top-to-bottom vertical transparent liquid shine -->
+                    <corners android:radius="22dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</ripple>
