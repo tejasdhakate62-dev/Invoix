@@ -2,7 +2,7 @@
 
 A sleek, intuitive mobile application designed for freelancers and small businesses to create, track, and manage invoices seamlessly. With a modern dark-themed UI and a streamlined navigation architecture, **Invoix** simplifies your billing workflow so you can focus on growing your business.
 
-> **Tagline:** CREATE. SEND. GET PAID.
+**Tagline:** CREATE. SEND. GET PAID.
 
 ---
 
@@ -57,3 +57,10 @@ Based on the application design, here is a breakdown of the core user interface 
 1. **Clone the project repository:**
    ```bash
    git clone [https://github.com/tejasdhakate62-dev/Invoix.git](https://github.com/tejasdhakate62-dev/Invoix.git)
+   ```
+   👤 Author
+Tejas Dhakate
+Role: Computer Engineering Student
+University: Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU)
+GitHub: @tejasdhakate62-dev
+Email: tejasdhakate62@gmail.com
