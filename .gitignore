@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Ignore local credential files
+secrets.xml
+local.properties
